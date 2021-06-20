@@ -1,0 +1,28 @@
+.header-intro {
+    font-family: var(--font-secondary);
+    color: var(--primary);
+}
+.header-name {
+    color: var(--text-01);
+}
+.subheader {
+    line-height: 0.8;
+}
+
+.subheader-description {
+    max-width: 600px;
+    font-size: 18px;
+}
+
+.mail {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 100px;
+    font-family: var(--font-secondary);
+
+    icon {
+        margin-right: 5px;
+        color: var(--primary);
+    }
+}

@@ -1,0 +1,14 @@
+:host {
+    display: block;
+    background-color: var(--text-02);
+
+    &[data-direction='horizontal'] {
+        width: 100%;
+        height: 1px;
+    }
+
+    &[data-direction='vertical'] {
+        width: 1px;
+        height: 100%;
+    }
+}

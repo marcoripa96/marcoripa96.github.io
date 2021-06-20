@@ -1,0 +1,30 @@
+list {
+    display: flex;
+    gap: 10px;
+
+    &[data-direction='horizontal'] {
+        flex-direction: row;
+    }
+
+    &[data-direction='vertical'] {
+        flex-direction: column;
+    }
+
+    list-item {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 14px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background-color: var(--primary);
+            transform: rotate(45deg);
+        }
+    }
+}

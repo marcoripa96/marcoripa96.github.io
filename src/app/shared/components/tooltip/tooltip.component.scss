@@ -1,0 +1,21 @@
+:host {
+
+    .tooltip-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .tooltip-content {
+            pointer-events: none;
+            position: absolute;
+            top: 120%;
+            align-self: center;
+            padding: 4px 6px;
+            border-radius: 6px;
+
+            background-color: var(--primary);
+            color: var(--text-03);
+            font-family: var(--font-secondary);
+        }
+    }
+}

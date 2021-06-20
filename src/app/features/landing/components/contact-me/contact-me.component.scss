@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    max-width: 800px;
+
+    divider {
+        max-width: 350px;
+    }
+
+    .open {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+}

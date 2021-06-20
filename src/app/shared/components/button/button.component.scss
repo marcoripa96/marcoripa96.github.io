@@ -1,0 +1,42 @@
+$text-size: 16px;
+
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: $text-size;
+
+    transition: all 250ms ease-out;
+
+    &[data-appearance='filled'] {
+        background-color: var(--primary);
+
+        &:hover {
+            background-color: rgb(6, 214, 162);
+            border-color: rgb(6, 214, 162);
+        }
+
+        icon {
+            margin-left: 6px;
+        }
+    }
+
+    &[data-appearance='outlined'] {
+        color: var(--primary);
+
+        &:hover {
+            background-color: rgb(100, 255, 218, 0.1);
+        }
+
+        icon {
+            margin-left: 6px;
+        }
+    }
+
+}
