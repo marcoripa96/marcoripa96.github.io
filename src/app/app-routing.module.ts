@@ -10,7 +10,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('@features/landing/landing.module').then(m => m.LandingModule)
-  }
+  },
+  {
+    path: 'secret',
+    loadChildren: () => import('@features/secret-area/secret-area.module').then(m => m.SecretAreaModule)
+  },
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ technologies {
 }
 
 #works {
-    padding: 200px 0px 100px;
+    padding: 100px 0px 100px;
     margin: 100px 100px 0px;
     works {
         margin: 0px auto;
@@ -72,6 +72,12 @@ technologies {
             background-color: var(--primary);
         }
     }
+}
+
+circle-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 

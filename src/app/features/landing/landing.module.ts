@@ -9,6 +9,7 @@ import { TechnologiesModule } from './components/technologies/technologies.modul
 import { ContactMeModule } from './components/contact-me/contact-me.module';
 import { IconModule } from 'src/app/core/icons/icon.module';
 import { LoaderModule } from './components/loader/loader.module';
+import { CircleLinkModule } from '@shared/components/circle-link/circle-link.module';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
     WorksModule,
     ContactMeModule,
     IconModule,
-    LoaderModule
+    LoaderModule,
+    CircleLinkModule
   ],
   declarations: [LandingComponent]
 })

@@ -5,7 +5,8 @@ import { fromEvent } from 'rxjs';
 import { IconRegistryService } from './core/icons/icon-registry.service';
 import {
   angularIcon, gitHubIcon, gitIcon, heartIcon,
-  htmlIcon, jsIcon, mailIcon, nodeIcon, npmIcon, pythonIcon,
+  htmlIcon, jsIcon, mailIcon, nodeIcon, npmIcon, playIcon, pythonIcon,
+  questionMarkIcon,
   sassIcon, smileIcon, tfIcon, tsIcon
 } from './core/icons/icons';
 import { map } from 'rxjs/operators';
@@ -42,7 +43,9 @@ export class AppComponent implements OnInit {
       tfIcon,
       gitIcon,
       gitHubIcon,
-      smileIcon
+      smileIcon,
+      questionMarkIcon,
+      playIcon
     ])
   }
 
