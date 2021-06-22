@@ -1,16 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { AutoUnsub } from '@shared/decorators/auto-unsub';
+import { WINDOW } from '@ng-web-apis/common';
+import { fromEvent } from 'rxjs';
 import { IconRegistryService } from './core/icons/icon-registry.service';
-import { angularIcon, gitHubIcon, gitIcon, handIcon, heartIcon, htmlIcon, jsIcon, mailIcon, nodeIcon, npmIcon, pythonIcon, sassIcon, smileIcon, tfIcon, tsIcon } from './core/icons/icons';
+import {
+  angularIcon, gitHubIcon, gitIcon, heartIcon,
+  htmlIcon, jsIcon, mailIcon, nodeIcon, npmIcon, pythonIcon,
+  sassIcon, smileIcon, tfIcon, tsIcon
+} from './core/icons/icons';
+import { map } from 'rxjs/operators';
+import { ScrollService } from '@shared/services/scroll.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'portfolio';
+@AutoUnsub()
+export class AppComponent implements OnInit {
 
-  constructor(private _iconRegistry: IconRegistryService) {
+  readonly scroll$ = fromEvent(this.window, 'scroll').pipe(
+    map(() => this.window.scrollY)
+  );
+
+  constructor(
+    private readonly _iconRegistry: IconRegistryService,
+    private readonly _scrollService: ScrollService,
+    @Inject(WINDOW) private readonly window: Window
+  ) {
     this._iconRegistry.registerIcons([
       heartIcon,
       mailIcon,
@@ -27,5 +44,11 @@ export class AppComponent {
       gitHubIcon,
       smileIcon
     ])
+  }
+
+  ngOnInit() {
+    this.scroll$.subscribe(scrollY => {
+      this._scrollService.updateScrollY(scrollY);
+    });
   }
 }

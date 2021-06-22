@@ -5,9 +5,11 @@
     padding: 20px 0;
 
     .tag {
-        font-size: 16px;
+        font-size: var(--text-size-xs);
         color: var(--primary);
         font-family: var(--font-secondary);
+        font-style: italic;
+        opacity: 0.3;
     }
 
     .content {

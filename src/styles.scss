@@ -48,6 +48,23 @@ body {
     background-color: var(--background-base-01);
     color: var(--text-02);
     font-family: var(--font-primary);
+    margin: 0px;
+    //overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: var(--background-base-01);
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgb(69, 69, 104, 0.7);
+      border-radius: 16px;
+    }
 }
 
 a {

@@ -1,5 +1,4 @@
 :host {
-
     .tooltip-wrapper {
         position: relative;
         display: flex;
@@ -12,6 +11,7 @@
             align-self: center;
             padding: 4px 6px;
             border-radius: 6px;
+            z-index: 999;
 
             background-color: var(--primary);
             color: var(--text-03);

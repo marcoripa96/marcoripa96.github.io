@@ -1,7 +1,8 @@
 card {
     position: relative;
     display: block;
-    max-width: 400px;
+    //max-width: 400px;
+    //height: 125px;
 
     &:hover {
         .card-wrapper {
@@ -19,6 +20,7 @@ card {
     }
 
     .card-wrapper {
+        height: 100%;
         display: flex;
         flex-direction: column;
         padding: 10px;
@@ -42,6 +44,7 @@ card {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin-top: auto;
             gap: 5px;
             font-family: var(--font-secondary);
             font-size: var(--text-size-xs);

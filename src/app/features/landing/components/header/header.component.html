@@ -1,19 +1,24 @@
-<p class="header-intro">
-  Hello, my name is
-</p>
-<h1 class="header-name heading-01">
-  <wobble-word>Marco</wobble-word>&nbsp;<wobble-word>Ripamonti</wobble-word>
-</h1>
-<h2 class="subheader heading-02">
-  <wobble-word>I</wobble-word>&nbsp;<wobble-word><span highlight>love</span></wobble-word>&nbsp;<wobble-word>building</wobble-word>&nbsp;<wobble-word>things</wobble-word>&nbsp;<wobble-word>for</wobble-word>&nbsp;<wobble-word>the</wobble-word>&nbsp;<wobble-word>web.</wobble-word>
-</h2>
-<p class="subheader-description margin-top-45">
-  I have a master's degree in Computer Science and I am based in Italy. I'm most comfortable with building ideas for the web. 
-  I am a full stack developer, frontend developer and sometimes I like integrating machine learning in my projects.
-</p>
+<section [@list]="intersecting" waIntersectionObserver waIntersectionThreshold="0.6" (waIntersectionObservee)="onIntersection($event)">
+  <p [@enter]="intersecting" class="header-intro">
+    Hello, my name is
+  </p>
+  <h1 [@enter]="intersecting" class="header-name heading-01">
+    <wobble-word>Marco</wobble-word>&nbsp;<wobble-word>Ripamonti</wobble-word>
+  </h1>
+  <h2 [@enter]="intersecting" class="subheader heading-02">
+    <wobble-word>I</wobble-word>&nbsp;<wobble-word><span highlight>love</span></wobble-word>&nbsp;<wobble-word>building
+    </wobble-word>&nbsp;<wobble-word>things</wobble-word>&nbsp;<wobble-word>for</wobble-word>&nbsp;<wobble-word>the
+    </wobble-word>&nbsp;<wobble-word>web.</wobble-word>
+  </h2>
+  <p [@enter]="intersecting" class="subheader-description margin-top-45">
+    I have a master's degree in Computer Science and I am based in Italy. I'm most comfortable with building ideas for
+    the web.
+    I am a full stack developer, frontend developer and sometimes I like integrating machine learning in my projects.
+  </p>
 
-<button appButton appearance="outlined">Contact me</button>
+  <button [@enter]="intersecting" appButton appearance="outlined">Contact me</button>
 
-<div class="mail">
-  <icon name="mail"></icon>marco.ripa.96@gmail.com
-</div>
+  <div [@enter]="intersecting" class="mail">
+    <icon name="mail"></icon>marco.ripa.96@gmail.com
+  </div>
+</section>

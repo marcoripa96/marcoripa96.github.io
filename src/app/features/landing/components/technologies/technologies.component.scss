@@ -6,13 +6,12 @@
 
 .title {
     text-align: center;
+    font-size: var(--text-size-lg);
 }
 
 .list-tech {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
 
     .tech {
@@ -28,5 +27,11 @@
     .angular-template {
         display: flex;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .list-tech {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

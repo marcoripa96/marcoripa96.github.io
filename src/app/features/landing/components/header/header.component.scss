@@ -26,3 +26,13 @@
         color: var(--primary);
     }
 }
+
+@media screen and (max-width: 620px) {
+    .header-name {
+        font-size: 60px
+    }
+
+    .subheader {
+        font-size: 40px
+    }
+}

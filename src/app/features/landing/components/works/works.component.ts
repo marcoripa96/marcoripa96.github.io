@@ -1,3 +1,4 @@
+import { trigger, transition, query, stagger, animateChild, style, animate, state } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 interface Work {
@@ -34,13 +35,13 @@ const WORKS: Work[] = [
   },
   {
     title: 'Clothing reccomendation',
-    description: 'Clothing reccomendation using Neural Networks and handcrafted features',
+    description: 'Clothing reccomendation using Neural Networks and handcrafted features.',
     link: 'https://github.com/marcoripa96/clothing_recommendation',
     techs: ['Python', 'Telegram']
   },
   {
     title: 'Personalized Search Engine',
-    description: 'Personalized search engine based on tweets multiple famous people.',
+    description: 'Personalized search engine based on tweets from multiple famous people.',
     link: 'https://github.com/marcoripa96/personalized_search_engine',
     techs: ['Python', 'ElasticSearch', 'Angular']
   },
@@ -56,15 +57,39 @@ const WORKS: Work[] = [
   selector: 'works',
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss'],
+  animations: [
+    trigger('list', [
+      transition('* => true', [
+        query('@*',
+          stagger(100, animateChild())
+        )
+      ])
+    ]),
+    trigger('enterBottom', [
+      state('false', style({ opacity: 0, transform: 'translateY(60px)'})),
+      state('true', style({  opacity: 1, transform: 'translateY(0)' })),
+      transition('false => true', animate('300ms cubic-bezier(0.645,0.045,0.355,1)')),
+    ]),
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorksComponent implements OnInit {
+
+  intersecting: boolean = false;
 
   readonly works = WORKS;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onIntersection(entries: any): void {
+    entries.forEach((entry: any) => {
+      if (entry.isIntersecting) {
+        this.intersecting = true;
+      }
+    });
   }
 
 }

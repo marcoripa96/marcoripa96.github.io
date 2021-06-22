@@ -11,11 +11,13 @@ $text-size: 16px;
     border-radius: 6px;
     padding: 12px;
     font-size: $text-size;
+    font-family: var(--font-primary);
 
     transition: all 250ms ease-out;
 
     &[data-appearance='filled'] {
         background-color: var(--primary);
+        color: #000;
 
         &:hover {
             background-color: rgb(6, 214, 162);

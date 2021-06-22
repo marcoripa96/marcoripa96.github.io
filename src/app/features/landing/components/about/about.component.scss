@@ -9,9 +9,11 @@
     .section {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
 
         .text {
             max-width: 70%;
+            margin-right: 30px;
         }
 
         .me {
@@ -19,6 +21,7 @@
             width: 150px;
             border-radius: 6px;
             margin-left: auto;
+            flex-shrink: 0;
         
             img {
                 width: 100%;
@@ -48,6 +51,28 @@
                 z-index: -1;
             }
             
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+
+        .text {
+            margin-right: 0px !important;
+        }
+
+        .me {
+            margin-left: 0 !important;
+            margin: 40px 0px;
         }
     }
 }

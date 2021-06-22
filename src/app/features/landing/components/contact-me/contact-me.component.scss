@@ -2,14 +2,25 @@
     display: block;
     max-width: 800px;
 
-    divider {
-        max-width: 350px;
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .open {
+    .subtitle {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .title {
+        font-size: var(--text-size-lg);
     }
 }

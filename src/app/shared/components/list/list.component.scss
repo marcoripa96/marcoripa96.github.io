@@ -4,6 +4,7 @@ list {
 
     &[data-direction='horizontal'] {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     &[data-direction='vertical'] {

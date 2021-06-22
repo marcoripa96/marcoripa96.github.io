@@ -6,6 +6,7 @@ import { DividerModule } from '@shared/components/divider/divider.module';
 import { CardModule } from '@shared/components/card/card.module';
 import { IconModule } from 'src/app/core/icons/icon.module';
 import { ListModule } from '@shared/components/list/list.module';
+import { IntersectionObserverModule } from '@ng-web-apis/intersection-observer';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ListModule } from '@shared/components/list/list.module';
     DividerModule,
     CardModule,
     IconModule,
-    ListModule
+    ListModule,
+    IntersectionObserverModule
   ],
   declarations: [WorksComponent],
   exports: [WorksComponent]

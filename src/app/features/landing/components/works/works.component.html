@@ -1,28 +1,29 @@
-<div highlight class="vertical-text margin-right-30">
-  <h1 class="heading-03 margin-top-0">W</h1>
-  <h1 class="heading-03">O</h1>
-  <h1 class="heading-03">R</h1>
-  <h1 class="heading-03">K</h1>
-  <h1 class="heading-03">S</h1>
-</div>
+<section [@list]="intersecting" waIntersectionObserver waIntersectionThreshold="0.4" (waIntersectionObservee)="onIntersection($event)">
+  <div [@enterBottom]="intersecting"  highlight class="vertical-text">
+    <h1 class="heading-03">W</h1>
+    <h1 class="heading-03">O</h1>
+    <h1 class="heading-03">R</h1>
+    <h1 class="heading-03">K</h1>
+    <h1 class="heading-03">S</h1>
+  </div>
+  
+  <div [@enterBottom]="intersecting" class="works-cards">
+    <card *ngFor="let work of works" [link]="work.link">
+      <card-title>{{work.title}}</card-title>
+      <card-description>{{work.description}}</card-description>
+      <card-footer>
+        <list direction="horizontal">
+          <list-item *ngFor="let tech of work.techs">{{tech}}</list-item>
+        </list>
+      </card-footer>
+      <card-frame-details>
+        <icon name="github"></icon>
+        <span>View on GitHub</span>
+      </card-frame-details>
+    </card>
+  </div>
+</section>
 
-<divider direction="vertical"></divider>
-
-<div class="works-cards">
-  <card *ngFor="let work of works" [link]="work.link">
-    <card-title>{{work.title}}</card-title>
-    <card-description>{{work.description}}</card-description>
-    <card-footer>
-      <list direction="horizontal">
-        <list-item *ngFor="let tech of work.techs">{{tech}}</list-item>
-      </list>
-    </card-footer>
-    <card-frame-details>
-      <icon name="github"></icon>
-      <span>View on GitHub</span>
-    </card-frame-details>
-  </card>
-</div>
 
 
 

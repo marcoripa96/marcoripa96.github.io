@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit } from '
 import { AppButton } from './button';
 
 @Component({
-  selector: 'button[appButton]',
+  selector: 'button[appButton], a[appButton]',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

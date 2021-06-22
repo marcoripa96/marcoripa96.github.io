@@ -6,6 +6,7 @@ import { TagModule } from '@shared/components/tag/tag.module';
 import { WobbleWordModule } from '../wobble-word/wobble-word.module';
 import { IconModule } from 'src/app/core/icons/icon.module';
 import { ButtonModule } from '@shared/components/button/button.module';
+import { IntersectionObserverModule } from '@ng-web-apis/intersection-observer';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ButtonModule } from '@shared/components/button/button.module';
     WobbleWordModule,
     IconModule,
     ButtonModule,
+    IntersectionObserverModule
   ],
   declarations: [HeaderComponent],
   exports: [HeaderComponent]

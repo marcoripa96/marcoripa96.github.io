@@ -7,6 +7,8 @@ import { AboutModule } from './components/about/about.module';
 import { WorksModule } from './components/works/works.module';
 import { TechnologiesModule } from './components/technologies/technologies.module';
 import { ContactMeModule } from './components/contact-me/contact-me.module';
+import { IconModule } from 'src/app/core/icons/icon.module';
+import { LoaderModule } from './components/loader/loader.module';
 
 const routes: Routes = [
   {
@@ -23,7 +25,9 @@ const routes: Routes = [
     AboutModule,
     TechnologiesModule,
     WorksModule,
-    ContactMeModule
+    ContactMeModule,
+    IconModule,
+    LoaderModule
   ],
   declarations: [LandingComponent]
 })
