@@ -1,4 +1,4 @@
-<a [ngClass]="{'expand': expandable}">
+<a routerLink="undefined" [ngClass]="{'expand': expandable, 'disabled': !expandable}">
     <icon name="play" *ngIf="expandable"></icon>
 </a>
 <div *ngIf="!expandable" class="question-marks">

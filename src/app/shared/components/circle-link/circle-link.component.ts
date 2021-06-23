@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 
+const KEY_CODE = 'KeyM';
+
 @Component({
   selector: 'circle-link',
   templateUrl: './circle-link.component.html',
@@ -20,7 +22,7 @@ export class CircleLinkComponent implements OnInit {
   @HostListener('mouseenter', ['$event']) 
   mouseenter(event: MouseEvent) {
     this._hovering = true;
-    if (this._currentKey === 'ShiftLeft') {
+    if (this._currentKey === KEY_CODE) {
       this.expandable = true;
     } else {
       this.expandable = false;
@@ -35,10 +37,11 @@ export class CircleLinkComponent implements OnInit {
 
   @HostListener('document:keydown', ['$event'])
   keydown(e: KeyboardEvent) {
+    console.log(e);
     if (this._currentKey !== e.code) {
       this._currentKey = e.code;
 
-      if (this._hovering && this._currentKey === 'ShiftLeft') {
+      if (this._hovering && this._currentKey === KEY_CODE) {
         this.expandable = true;
       } else {
         this.expandable = false;
@@ -48,7 +51,7 @@ export class CircleLinkComponent implements OnInit {
 
   @HostListener('document:keyup', ['$event'])
   keyup(e: KeyboardEvent) {
-    if (this._hovering && this._currentKey === 'ShiftLeft') {
+    if (this._hovering && this._currentKey === KEY_CODE) {
       this.expandable = false;
     }
     this._currentKey = '';

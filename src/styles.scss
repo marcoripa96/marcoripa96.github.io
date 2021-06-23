@@ -2,6 +2,7 @@
 :root {
     --background-base-01: #202030;
     --background-base-02: #2b2b3f;
+    --background-base-03: #3a3a56;
     --text-01: #ccd6f6;
     --text-02: #8892b0;
     --text-03: #202030;
@@ -44,12 +45,16 @@ $length:(0,5,10,15,30,45,50);
     margin: 12px 0px;
 }
 
+html {
+  height: 100%;
+}
+
 body {
     background-color: var(--background-base-01);
     color: var(--text-02);
     font-family: var(--font-primary);
     margin: 0px;
-    //overflow-x: hidden;
+    height: 100%;
 
     &::-webkit-scrollbar {
       width: 7px;
