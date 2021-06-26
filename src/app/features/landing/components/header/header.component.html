@@ -1,4 +1,4 @@
-<section [@list]="intersecting" waIntersectionObserver waIntersectionThreshold="0.6" (waIntersectionObservee)="onIntersection($event)">
+<section [@list]="intersecting" waIntersectionObserver waIntersectionThreshold="0.1" (waIntersectionObservee)="onIntersection($event)">
   <p [@enter]="intersecting" class="header-intro">
     Hello, my name is
   </p>
@@ -16,9 +16,11 @@
     I am a full stack developer, frontend developer and sometimes I like integrating machine learning in my projects.
   </p>
 
-  <button [@enter]="intersecting" appButton appearance="outlined">Contact me</button>
+  <a href="mailto:marco.ripa.96@gmail.com" [@enter]="intersecting" appButton appearance="outlined">Contact me</a>
 
   <div [@enter]="intersecting" class="mail">
-    <icon name="mail"></icon>marco.ripa.96@gmail.com
+    <a href="mailto:marco.ripa.96@gmail.com" appButton appearance="flat" icon="mail"></a>
+    <a href="https://twitter.com/ripa_96" target="_blank" appButton appearance="flat" icon="twitter"></a>
+    <a href="https://www.instagram.com/marco.ripa.96/" target="_blank" appButton appearance="flat" icon="instagram"></a>
   </div>
 </section>

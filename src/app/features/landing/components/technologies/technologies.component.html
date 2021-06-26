@@ -1,4 +1,4 @@
-<section [@list]="intersecting" waIntersectionObserver waIntersectionThreshold="0.5" (waIntersectionObservee)="onIntersection($event)">
+<section [@list]="intersecting" waIntersectionObserver waIntersectionThreshold="0.3" (waIntersectionObservee)="onIntersection($event)">
     <h1 [@enterBottomFast]="intersecting" class="title">What I know.</h1>
     <div [@enterBottom]="intersecting" class="list-tech margin-top-45">
         <tooltip [content]="jsTooltip">

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { angularIcon, arrowRightIcon, gitHubIcon, gitIcon, heartIcon, 
-  htmlIcon, Icon, jsIcon, mailIcon, menuIcon, nodeIcon, npmIcon, 
+  htmlIcon, Icon, instagramIcon, jsIcon, mailIcon, menuIcon, nodeIcon, npmIcon, 
   playIcon, pythonIcon, questionMarkIcon, sassIcon, 
-  smileIcon, tfIcon, tsIcon } from './icons';
+  smileIcon, tfIcon, tsIcon, twitterIcon } from './icons';
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +44,9 @@ export class IconRegistryService {
       questionMarkIcon,
       playIcon,
       menuIcon,
-      arrowRightIcon
+      arrowRightIcon,
+      instagramIcon,
+      twitterIcon
     ])
   }
 
