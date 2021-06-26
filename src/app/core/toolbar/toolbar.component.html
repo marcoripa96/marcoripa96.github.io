@@ -1,8 +1,23 @@
 <div @list [@TranslateUpDown]="scrolled$ | async" class="toolbar-wrapper">
-    <a @dropDown routerLink="/" fragment="about"><span highlight>.get(</span> <span class="argument">About me</span> <span
-            highlight>)</span></a>
-    <a @dropDown routerLink="/" fragment="works"><span highlight>.get(</span> <span class="argument">My works</span> <span
-            highlight>)</span></a>
-    <a @dropDown routerLink="/" fragment="contact"><span highlight>.get(</span> <span class="argument">Get in touch</span> <span
-            highlight>)</span></a>
+        <img src="/assets/logo.png" class="logo">
+        <a @dropDown routerLink="/" fragment="about"><span highlight>.get(</span> <span class="argument">About me</span>
+                <span highlight>)</span></a>
+        <a @dropDown routerLink="/" fragment="works"><span highlight>.get(</span> <span class="argument">My works</span>
+                <span highlight>)</span></a>
+        <a @dropDown routerLink="/" fragment="contact"><span highlight>.get(</span> <span class="argument">Get in
+                        touch</span> <span highlight>)</span></a>
+        <button class="menu" appButton appearance="flat" icon="menu" (click)="toggleMenu()"></button>
 </div>
+
+<ng-template #menuContent>
+        <div @list class="menu-items">
+                <img @enterBottom src="/assets/logo.png">
+                <a @enterBottom routerLink="/" fragment="about"><span highlight>.get(</span> <span class="argument">About
+                                me</span><span highlight>)</span></a>
+                <a @enterBottom routerLink="/" fragment="works"><span highlight>.get(</span> <span class="argument">My
+                                works</span><span highlight>)</span></a>
+                <a @enterBottom routerLink="/" fragment="contact"><span highlight>.get(</span> <span class="argument">Get in
+                                touch</span> <span highlight>)</span></a>
+                <button @enterBottom class="close-button" appButton appearance="flat" icon="arrowRight"></button>
+        </div>
+</ng-template>

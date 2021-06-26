@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FullScreenOverlayModule } from '@shared/components/full-screen-overlay/full-screen-overlay.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarModule } from './core/toolbar/toolbar.module';
@@ -13,7 +14,8 @@ import { ToolbarModule } from './core/toolbar/toolbar.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ToolbarModule
+    ToolbarModule,
+    FullScreenOverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]

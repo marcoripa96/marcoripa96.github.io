@@ -76,3 +76,28 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.menu-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--text-size-md);
+
+  img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 40px;
+  }
+  a {
+    margin-bottom: 20px;
+  }
+
+  .close-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+}

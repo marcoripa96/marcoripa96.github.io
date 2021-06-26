@@ -6,7 +6,7 @@ $text-size: 16px;
     align-items: center;
     cursor: pointer;
     outline: none;
-    border: 1px solid var(--primary);
+    border: none;
     background-color: transparent;
     border-radius: 6px;
     padding: 12px;
@@ -31,6 +31,7 @@ $text-size: 16px;
 
     &[data-appearance='outlined'] {
         color: var(--primary);
+        border: 1px solid var(--primary);
 
         &:hover {
             background-color: rgb(100, 255, 218, 0.1);
@@ -38,6 +39,14 @@ $text-size: 16px;
 
         icon {
             margin-left: 6px;
+        }
+    }
+
+    &[data-appearance='flat'] {
+        color: var(--text-02);
+
+        &:hover {
+            color: var(--primary);
         }
     }
 

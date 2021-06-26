@@ -1,1 +1,1 @@
-export type AppButton = 'outlined' | 'filled'; 
+export type AppButton = 'outlined' | 'filled' | 'flat'; 

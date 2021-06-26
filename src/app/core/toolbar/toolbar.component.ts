@@ -1,5 +1,6 @@
 import { trigger, state, style, transition, animate, animateChild, query, stagger } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { FullScreenOverlayService } from '@shared/components/full-screen-overlay/full-screen-overlay.service';
 import { ScrollService } from '@shared/services/scroll.service';
 import { distinctUntilChanged, map, pairwise, startWith, tap } from 'rxjs/operators';
 
@@ -32,11 +33,19 @@ import { distinctUntilChanged, map, pairwise, startWith, tap } from 'rxjs/operat
           transform: 'translateY(0)'
         }))
       ])
-    ])
+    ]),
+    trigger('enterBottom', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(40px)'}),
+        animate('300ms cubic-bezier(0.645,0.045,0.355,1)', style({opacity: 1, transform: 'translateY(0)'}))
+      ]),
+    ]),
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarComponent implements OnInit {
+
+  @ViewChild('menuContent') menuContent!: TemplateRef<any>;
 
   readonly scrolled$ = this._scrollService.scroll$.pipe(
     startWith(0),
@@ -53,13 +62,15 @@ export class ToolbarComponent implements OnInit {
     distinctUntilChanged()
   )
 
-  constructor(private readonly _scrollService: ScrollService) { }
+  constructor(
+    private readonly _scrollService: ScrollService,
+    private readonly _overlayService: FullScreenOverlayService
+  ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  private _getStatus(value: number): any {
-
+  toggleMenu(): void {
+    this._overlayService.setOverlay({content: this.menuContent});
   }
 
 }

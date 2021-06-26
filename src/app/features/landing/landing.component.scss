@@ -93,7 +93,36 @@ circle-link {
 
 @media screen and (max-width: 620px) {
     .made-with {
-        display: none !important;
+        position: relative;
+        transform: none;
+        writing-mode: horizontal-tb;
+        
+
+        .link-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: none;
+            transform: none;
+            box-sizing: border-box;
+
+            icon {
+                margin-left: 10px;
+                transform: none;
+            }
+        }
+
+        &:hover {
+            .link-wrapper {
+                transform: none;
+    
+                &::after {
+                    height: 0px;
+                    width: 0px;
+                }
+            }
+        }
+        //display: none !important;
     }
 
     header {
