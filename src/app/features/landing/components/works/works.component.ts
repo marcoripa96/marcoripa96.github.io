@@ -50,6 +50,18 @@ const WORKS: Work[] = [
     description: 'Multilabel classification on comments from Wikipedia edit pages using BERT and RNNs.',
     link: 'https://github.com/marcoripa96/toxic_comment_classification',
     techs: ['Python', 'Tensorflow', 'Keras']
+  },
+  {
+    title: 'SemTUI',
+    description: 'My master thesis project. It\'s a tool for the Semantic Enrichmnet of Tabular data.',
+    link: 'https://github.com/I2Tunimib',
+    techs: ['React', 'NodeJS']
+  },
+  {
+    title: 'Aka',
+    description: 'I\'m still working on it. It\'s a link shortner built for developers.',
+    link: 'https://aka.co.it/',
+    techs: ['React', 'NextJS', 'NodeJS']
   }
 ]
 

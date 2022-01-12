@@ -9,12 +9,12 @@
         <tooltip [content]="angularTooltip">
             <icon class="tech" name="angular"></icon>
         </tooltip>
-        <ng-template #angularTooltip>
-            <div class="angular-template">
-                <span class="margin-right-5">Angular</span>
-                <icon name="heart"></icon>
-            </div>
-        </ng-template>
+        <ng-template #angularTooltip>Angular</ng-template>
+
+        <tooltip [content]="reactTooltip">
+          <icon class="tech" name="react"></icon>
+        </tooltip>
+        <ng-template #reactTooltip>React</ng-template>
 
         <tooltip [content]="tsTooltip">
             <icon class="tech" name="ts"></icon>
@@ -55,5 +55,10 @@
             <icon class="tech" name="git"></icon>
         </tooltip>
         <ng-template #gitTooltip>Git</ng-template>
+
+        <tooltip [content]="dockerTooltip">
+          <icon class="tech" name="docker"></icon>
+        </tooltip>
+        <ng-template #dockerTooltip>Docker</ng-template>
     </div>
 </section>
