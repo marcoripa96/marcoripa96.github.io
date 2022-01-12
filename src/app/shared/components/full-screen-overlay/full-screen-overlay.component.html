@@ -1,5 +1,0 @@
-<div class="backdrop" (click)="backdropClicked($event)" *ngIf="template$ | async as template">
-  <div @slideInOut (@slideInOut.done)="onAnimationDone($event)" class="content" *ngIf="template.content">
-    <ng-container [ngTemplateOutlet]="template.content"></ng-container>
-  </div>
-</div>

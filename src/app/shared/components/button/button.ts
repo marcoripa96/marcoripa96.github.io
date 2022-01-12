@@ -1,1 +1,0 @@
-export type AppButton = 'outlined' | 'filled' | 'flat'; 
